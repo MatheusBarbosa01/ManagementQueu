@@ -8,17 +8,21 @@ public class Main {
         Client c6 = new Client("fff", "000.000.000-00", Client.Type.COMMON, Choice.CALL);
         Client c7 = new Client("ggg", "000.000.000-00", Client.Type.COMMON, Choice.CALL);
         Client c8 = new Client("hhh", "000.000.000-00", Client.Type.PRIORITY, Choice.CALL);
+        Client c9 = new Client("iii", "000.000.000-00", Client.Type.COMMON, Choice.CALL);
+        Client c10 = new Client("jjj", "000.000.000-00", Client.Type.COMMON, Choice.CALL);
         Management m1 = new Management();
-        m1.addOnCall(c1);
-        m1.addOnCall(c2);
-        m1.addOnCall(c3);
-        m1.addOnCall(c4);
-        m1.addOnCall(c5);
-        m1.addOnCall(c6);
-        m1.addOnCall(c7);
-        m1.addOnCall(c8);
+        m1.addOnCallOrChatbbot(c1);
+        m1.addOnCallOrChatbbot(c2);
+        m1.addOnCallOrChatbbot(c3);
+        m1.addOnCallOrChatbbot(c4);
+        m1.addOnCallOrChatbbot(c5);
+        m1.addOnCallOrChatbbot(c6);
+        m1.addOnCallOrChatbbot(c7);
+        m1.addOnCallOrChatbbot(c8);
+        m1.addOnCallOrChatbbot(c9);
+        m1.addOnCallOrChatbbot(c10);
         System.out.println(m1);
-        m1.delOnCall();
+        m1.delOnCallOrChatbot();
         System.out.println(m1);
 
     }

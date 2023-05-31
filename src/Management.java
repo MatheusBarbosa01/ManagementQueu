@@ -8,7 +8,7 @@ public class Management {
         createCalls();
     }
 
-    public void addOnCall(Client client) {
+    public void addOnCallOrChatbbot(Client client) {
 
 
         if (Client.Type.PRIORITY == client.getType()) {
@@ -20,11 +20,12 @@ public class Management {
                 } else if (cp % 3 == 2) {
                     calls[2].adicionarCall(client);
                 }
+                cp++;
             }else {
                 chatbots.adicionarChatbot(client);
             }
 
-            cp++;
+
         } else{
             if(Choice.CALL == client.getChoice()) {
                 if (cc % 3 == 0) {
@@ -34,14 +35,16 @@ public class Management {
                 } else if (cc % 3 == 2) {
                     calls[5].adicionarCall(client);
                 }
+                cc++;
+
             }
             else {
                 chatbots.adicionarChatbot(client);
             }
         }
-            cc++;
+
     }
-    public void delOnCall(){
+    public void delOnCallOrChatbot(){
         while(chatbots.size() != 0){
             chatbots.removeChatbot();
         }
